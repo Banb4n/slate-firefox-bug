@@ -1,2 +1,9 @@
+<p>This repository reproduces an error happening in Firefox with Slate.</p>
+<ol>
+    <li>Click in the input</li>
+    <li>Try navigating with arrow keys: it doesn't work</li>
+    <li>Press a character: "Permission denied to access property nodeType" is thrown</li>
+</ol>
+<p>The error comes from the `isInEditor` function which tries to read window.getSelection().anchorNode.nodeType</p>
 <div id="root"></div>
 <script src="bundle.js"></script>
